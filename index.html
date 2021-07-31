@@ -52,7 +52,7 @@
       scene.add(light);
 
       // specify a model URL
-      const modelUrl = 'https://raw.githubusercontent.com/immersive-web/webxr-samples/main/media/gltf/space/space.gltf';
+      let modelUrl = 'https://raw.githubusercontent.com/immersive-web/webxr-samples/main/media/gltf/space/space.gltf';
 
       controller = renderer.xr.getController(0);
       controller.addEventListener('select', onSelect);
