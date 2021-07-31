@@ -52,7 +52,7 @@
       scene.add(light);
 
       // specify a model URL
-      let modelUrl = 'https://raw.githubusercontent.com/Rushabh179/WebXRDemoThreejs/main/media/leaves/leaf_light.gltf';
+      let modelUrl = 'https://raw.githubusercontent.com/Rushabh179/WebXRDemoThreejs/main/media/leaves/leaf_big.gltf';
 
       controller = renderer.xr.getController(0);
       controller.addEventListener('select', onSelect);
@@ -112,7 +112,7 @@
 
       // load the model
       // loader takes in a few arguments loader(model url, onLoad callback, onProgress callback, onError callback)
-      let modelUrl = 'https://raw.githubusercontent.com/Rushabh179/WebXRDemoThreejs/main/media/leaves/leaf_light.gltf';
+      let modelUrl = 'https://raw.githubusercontent.com/Rushabh179/WebXRDemoThreejs/main/media/leaves/leaf_big.gltf';
       loader.load(
         // model URL
         modelUrl,
@@ -120,7 +120,7 @@
         function (gltf) {
           // gltf.scene contains the Three.js object group that represents the 3d object of the model
           scene.add(gltf.scene);
-          console.log("Model added to scene");
+          console.log("Model added to scene"+modelUrl);
 
           // you can optionally change the position of the model
           // gltf.scene.position.z = -10; // negative Z moves the model in the opposite direction the camera is facing
