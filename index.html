@@ -23,7 +23,6 @@
     let camera, scene, renderer;
     let reticle;
     let controller;
-    let loader;
 
     init();
     animate();
@@ -51,19 +50,11 @@
       light.position.set(0.5, 1, 0.25);
       scene.add(light);
 
-      // specify a model URL
-      let modelUrl = 'https://raw.githubusercontent.com/Rushabh179/WebXRDemoThreejs/main/media/leaves/leaf_big.gltf';
-
       controller = renderer.xr.getController(0);
       controller.addEventListener('select', onSelect);
       scene.add(controller);
 
-      addReticleToScene();
-
-      // create a GLTF loader object. GLTF is a 3D model format usually called the "JPEG of 3D" because it is
-      // fast and efficient to use, which is ideal for the web
-      loader = new THREE.GLTFLoader();
-      loader.position.set(0, 10, 10);
+      addReticleToScene();     
 
       const button = ARButton.createButton(renderer, {
         requiredFeatures: ["hit-test"] // notice a new required feature
@@ -113,6 +104,8 @@
 
       // load the model
       // loader takes in a few arguments loader(model url, onLoad callback, onProgress callback, onError callback)
+      let loader = new THREE.GLTFLoader();
+      
       let modelUrl = 'https://raw.githubusercontent.com/Rushabh179/WebXRDemoThreejs/main/media/leaves/leaf_big.gltf';
       loader.load(
         // model URL
@@ -120,7 +113,9 @@
         // onLoad callback: what get's called once the full model has loaded
         function (gltf) {
           // gltf.scene contains the Three.js object group that represents the 3d object of the model
-          scene.add(gltf.scene);
+          var mesh = gltf.scene;
+          mesh.position.set(0, 10, 10);
+          scene.add(mesh);
           console.log("Model added to scene"+modelUrl);
 
           // you can optionally change the position of the model
