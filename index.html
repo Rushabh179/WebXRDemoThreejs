@@ -106,7 +106,7 @@
       // loader takes in a few arguments loader(model url, onLoad callback, onProgress callback, onError callback)
       let loader = new THREE.GLTFLoader();
       
-      let modelUrl = 'https://raw.githubusercontent.com/Rushabh179/WebXRDemoThreejs/main/media/leaves/leaf_big.gltf';
+      let modelUrl = 'https://raw.githubusercontent.com/Rushabh179/WebXRDemoThreejs/main/media/leaves/leaf_normal.gltf';
       loader.load(
         // model URL
         modelUrl,
@@ -114,9 +114,9 @@
         function (gltf) {
           // gltf.scene contains the Three.js object group that represents the 3d object of the model
           var mesh = gltf.scene;
-          mesh.position.set(0, 0, 1);
+          mesh.position.set(0, 0, 0);
           scene.add(mesh);
-          console.log("Model added to scene"+modelUrl);
+          console.log("Model added to scene" + modelUrl);
 
           // you can optionally change the position of the model
           // gltf.scene.position.z = -10; // negative Z moves the model in the opposite direction the camera is facing
