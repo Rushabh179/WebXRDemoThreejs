@@ -63,6 +63,7 @@
       // create a GLTF loader object. GLTF is a 3D model format usually called the "JPEG of 3D" because it is
       // fast and efficient to use, which is ideal for the web
       loader = new THREE.GLTFLoader();
+      loader.position.set(0, 10, 10);
 
       const button = ARButton.createButton(renderer, {
         requiredFeatures: ["hit-test"] // notice a new required feature
@@ -137,7 +138,6 @@
         }
       );
 
-      loader.position.y = 10;
 
       }
     }
