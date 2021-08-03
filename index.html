@@ -52,7 +52,7 @@
       scene.add(light);
 
       // specify a model URL
-      let modelUrl = 'https://raw.githubusercontent.com/Rushabh179/WebXRDemoThreejs/main/media/leaves/leaf_big.gltf';
+      let modelUrl = 'https://raw.githubusercontent.com/Rushabh179/WebXRDemoThreejs/main/media/leaves/leaf_normal.gltf';
 
       controller = renderer.xr.getController(0);
       controller.addEventListener('select', onSelect);
@@ -112,7 +112,7 @@
 
       // load the model
       // loader takes in a few arguments loader(model url, onLoad callback, onProgress callback, onError callback)
-      let modelUrl = 'https://raw.githubusercontent.com/Rushabh179/WebXRDemoThreejs/main/media/leaves/leaf_big.gltf';
+      let modelUrl = 'https://raw.githubusercontent.com/Rushabh179/WebXRDemoThreejs/main/media/leaves/leaf_normal.gltf';
       loader.load(
         // model URL
         modelUrl,
@@ -136,7 +136,6 @@
           console.error(error);
         }
       );
-
 
       }
     }
