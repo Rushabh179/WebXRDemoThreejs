@@ -25,9 +25,9 @@
                 0.7071067094802856
             ],
             "scale" : [
-                6.140291213989258,
-                6.140292167663574,
-                6.140292167663574
+                14.501387596130371,
+                14.501387596130371,
+                14.501387596130371
             ]
         },
         {
@@ -62,7 +62,7 @@
     "materials" : [
         {
             "doubleSided" : true,
-            "name" : "leafmat",
+            "name" : "leafmat.001",
             "pbrMetallicRoughness" : {
                 "baseColorTexture" : {
                     "index" : 0
@@ -74,7 +74,7 @@
     ],
     "meshes" : [
         {
-            "name" : "SM_Leaf_21_SM_Leaf_21_Leaf_21_Uvme.000",
+            "name" : "SM_Leaf_21_SM_Leaf_21_Leaf_21_Uvme.001",
             "primitives" : [
                 {
                     "attributes" : {
