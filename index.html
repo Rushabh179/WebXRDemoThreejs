@@ -114,9 +114,9 @@
         function (gltf) {
           // gltf.scene contains the Three.js object group that represents the 3d object of the model
           var mesh = gltf.scene;
-          mesh.position.set(0, -1, -1);
+          mesh.position.set(0, -1, -1.5);
           scene.add(mesh);
-          console.log("Model added to scene (0, -1, -1) " + modelUrl);
+          console.log("Model added to scene (0, -1, -1.5) " + modelUrl);
 
           // you can optionally change the position of the model
           // gltf.scene.position.z = -10; // negative Z moves the model in the opposite direction the camera is facing
